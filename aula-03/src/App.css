@@ -1,36 +1,8 @@
-/* =============================================
-   RESET E BASE
-   ============================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: #1a1a2e;
-  background: #f5f7fa;
-  -webkit-font-smoothing: antialiased;
-}
-
-
-
-/* =============================================
-   MENSAGENS DE ERRO
-   ============================================= */
-
 .error-message {
   font-size: 0.8rem;
   color: #dc2626;
   min-height: 1.2em;
 }
-
-/* =============================================
-   HEADER
-   ============================================= */
 
 .header {
   background: #00995d;
@@ -70,16 +42,12 @@ body {
   cursor: pointer;
   font-size: 0.85rem;
   font-family: inherit;
-  transition: background 0.2s;
+  
 }
 
 .btn-logout:hover {
   background: rgba(255, 255, 255, 0.25);
 }
-
-/* =============================================
-   MAIN CONTENT
-   ============================================= */
 
 .main-content {
   max-width: 900px;
@@ -101,10 +69,6 @@ body {
   color: #6b7280;
   margin-top: 4px;
 }
-
-/* =============================================
-   CONSULTA CARDS
-   ============================================= */
 
 .consultas-list {
   display: flex;
@@ -150,10 +114,6 @@ body {
   color: #6b7280;
 }
 
-/* =============================================
-   STATUS BADGES
-   ============================================= */
-
 .status-badge {
   display: inline-flex;
   padding: 4px 10px;
@@ -176,10 +136,6 @@ body {
   background: #fef2f2;
   color: #dc2626;
 }
-
-/* =============================================
-   RESPONSIVIDADE
-   ============================================= */
 
 @media (max-width: 480px) {
   .login-card {
