@@ -1,0 +1,44 @@
+/* =============================================
+   RESET E BASE
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =============================================
+   RESPONSIVIDADE — Mobile First
+   ============================================= */
+
+/* Telas pequenas (até 480px) */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px;
+    border-radius: 8px;
+  }
+
+  .login-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .login-header__icon {
+    font-size: 2rem;
+  }
+}
+
+/* Telas medias (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .login-card {
+    padding: 32px;
+  }
+}
