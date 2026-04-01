@@ -43,7 +43,7 @@ function DashboardPage({ paciente }) {
                             const  {id, medico, especialidade, status, data} = consulta;
                             return (
                                 <ConsultaItemPage
-                                    idx={id}
+                                    idx={index}
                                     especialidade={especialidade}
                                     medico={medico}
                                     data={data}

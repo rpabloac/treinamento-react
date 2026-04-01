@@ -20,8 +20,8 @@ function Navbar({ paciente, setPaciente }) {
             </div>
 
             <nav className="navbar-nav">
-                {NAV_LINKS.map(({ to, label, end }) => (
-                <NavLink key={to} to={to} end={end} className={navLinkClass}>
+                {NAV_LINKS.map(({ to, label, end }, index) => (
+                <NavLink key={index} to={to} end={end} className={navLinkClass}>
                     {label}
                 </NavLink>
                 ))}
