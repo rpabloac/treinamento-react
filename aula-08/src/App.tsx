@@ -18,7 +18,7 @@ function App() {
         <Route element={paciente ? <MainLayout paciente={paciente}  setPaciente={setPaciente} /> : <Navigate to="/login" />}>
           <Route path="/" element={<DashboardPage paciente={paciente} />} />
           <Route path="/exames" element={<ExamesPage/>}/>
-          <Route path="/consutas" element={<ConsultasPage/>}/>
+          <Route path="/consultas" element={<ConsultasPage/>}/>
           <Route path="/agendamento" element={<AgendamentoPage />}/>
         </Route>
       </Routes>
