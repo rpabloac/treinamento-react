@@ -27,7 +27,10 @@ function DashboardPage() {
     const consultasRecentes = useMemo(() => {
         return consultas
         .filter((c) => c.status !== "cancelada")   // ignora canceladas
-        .sort((a, b) => new Date(b.data) - new Date(a.data)) // mais recentes primeiro
+        .sort(
+          (a, b) =>
+            new Date(b.data).getTime() - new Date(a.data).getTime(), // mais recentes primeiro
+        )
         .slice(0, 3);
     }, [consultas]);
 
@@ -53,11 +56,11 @@ function DashboardPage() {
                 <p>Exames pendentes: {estatisticas.examesPendentes}</p>
             </section>
 
-            <session>
+            <section>
                 <h1>Consultas Recentes</h1>
                 <ul>
                     {consultasRecentes.map((consulta, index) => {
-                        const  {id, medico, especialidade, status, data} = consulta;
+                        const { medico, especialidade, status, data } = consulta;
                         return (
                             <ConsultaItemPage
                                 idx={index}
@@ -69,7 +72,7 @@ function DashboardPage() {
                         )
                     })}
                 </ul>
-            </session>
+            </section>
         </>
     );
 }

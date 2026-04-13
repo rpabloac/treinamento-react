@@ -1,18 +1,19 @@
-import { useEffect, useRef, useState, useCallback  } from "react";
-import InputField from "../../components/InputField/InputField.js";
+import { useEffect, useRef, useState, useCallback } from "react";
+import type { ChangeEvent } from "react";
+import InputField from "../../components/InputField/InputField";
 import { usePaciente } from "../../contexts/PacienteContext";
 import "./Login.css";
 
 function LoginPage() {
     const { login, error } = usePaciente();
     const [formData, setFormData] = useState({ carteirinha: "", senha: "" });
-    const carteirinhaRef = useRef(null);
+    const carteirinhaRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         carteirinhaRef.current?.focus();
     }, []);
 
-    const handleChange = useCallback((e) => {
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         const { id, value } = e.target;
         setFormData((prev) => ({ ...prev, [id]: value }));
     }, []);
